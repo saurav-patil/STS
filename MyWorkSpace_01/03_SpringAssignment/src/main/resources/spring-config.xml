@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id= "sbuBean" class= "com.roughInfinity.model.SBU" scope= "prototype">
+		<property name="sbuId" value= "101"></property>
+		<property name="sbuName" value= "Product Engineering Services"></property>
+		<property name="sbuHead" value= "Kiran Rao"></property>
+		<property name="empList">
+		<list value-type="com.roughInfinity.model.Employee">
+			<ref bean="empBean"/>
+			<ref bean="empBean2"/>
+		</list>
+		</property>	
+	</bean>	
+	<bean id= "empBean" class= "com.roughInfinity.model.Employee" scope= "prototype">
+		<property name="empId" value="12345"></property>
+		<property name="empName" value="Rohit"></property>
+		<property name="empSal" value="1200000"></property>
+	</bean>
+	<bean id= "empBean2" class= "com.roughInfinity.model.Employee" scope= "prototype">
+		<property name="empId" value="12346"></property>
+		<property name="empName" value="Virat"></property>
+		<property name="empSal" value="1800000"></property>
+	</bean>
+</beans>
+

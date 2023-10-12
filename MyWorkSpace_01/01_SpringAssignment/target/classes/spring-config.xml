@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id= "empBean" class= "com.roughInfinity.model.Employee" scope= "prototype">
+		<property name="empId" value= "12345"></property>
+		<property name="empName" value= "Harriet"></property>
+		<property name="empSal" value= "40000"></property>
+		<property name="empBU" value= "PES-BU"></property>
+		<property name="empAge" value= "30"></property>	
+	</bean>
+</beans>
